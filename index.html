@@ -115,6 +115,41 @@
   .stats{display:flex;flex-wrap:wrap;gap:26px;margin-top:22px}
   .stat b{display:block;font-size:26px;font-weight:800;color:#fff}
   .stat span{font-size:12px;color:var(--tx2);letter-spacing:1px}
+  /* 賽事名次牆（僅列分組名次，不列成績與總排名） */
+  .races{margin-top:26px}
+  .races .rt{font-size:12px;letter-spacing:2px;color:var(--green);margin-bottom:8px}
+  .races .row{display:flex;align-items:center;gap:12px;padding:7px 0;border-bottom:1px solid var(--line)}
+  .races .rk{flex:0 0 auto;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;color:#0b0d0e}
+  .races .rk.g{background:#d4af37;color:#0b0d0e}
+  .races .rk.s{background:#c3c7cb;color:#0b0d0e}
+  .races .rk.b{background:#a5642f;color:#fff}
+  .races .rk.n{background:#41484c;color:#fff}
+  .races .nm{font-size:15px;color:#fff;font-weight:700;flex:1 1 auto;min-width:0}
+  .races .dt{font-size:12.5px;color:var(--tx2);letter-spacing:.5px;flex:0 0 auto}
+  .races .note{font-size:11.5px;color:var(--tx2);margin-top:8px;opacity:.85}
+  @media(max-width:520px){.races .dt{display:none}}
+  /* BQ 年度分布 */
+  .bq{margin-top:24px}
+  .bq .rt{font-size:12px;letter-spacing:2px;color:var(--green);margin-bottom:10px}
+  .bq .bars{display:flex;gap:10px;align-items:flex-end}
+  .bq .col{flex:1;text-align:center;min-width:0}
+  .bq .col .c{font-size:12px;font-weight:700;color:#fff}
+  .bq .col .bar{height:54px;display:flex;align-items:flex-end;justify-content:center;margin-top:3px}
+  .bq .col .bar i{display:block;width:26px;margin:0 auto;border-radius:3px 3px 0 0;background:linear-gradient(180deg,var(--green),#00786e)}
+  .bq .col .y{display:block;font-size:11px;color:var(--tx2);margin-top:5px;letter-spacing:.5px}
+  .bq .note{font-size:11.5px;color:var(--tx2);margin-top:8px;opacity:.85}
+  /* 大滿貫星圖：上排賽事名稱，下方星星＝參賽場次 */
+  .majors{margin-top:26px}
+  .majors .rt{font-size:12px;letter-spacing:2px;color:var(--green);margin-bottom:10px}
+  .majors .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+  @media(min-width:768px){.majors .grid{grid-template-columns:repeat(8,1fr)}}
+  .majors .cell{border:1px solid var(--line);border-radius:10px;padding:10px 6px;text-align:center;background:rgba(255,255,255,.02)}
+  .majors .cell b{display:block;font-size:12.5px;color:#fff;font-weight:700;letter-spacing:.5px}
+  .majors .cell .st{display:block;font-size:11.5px;color:var(--gold);margin-top:7px;letter-spacing:1px;line-height:1.4;word-break:break-all}
+  .majors .cell.todo{border-style:dashed;background:transparent}
+  .majors .cell.todo b{color:var(--tx2)}
+  .majors .cell.todo .st{color:var(--tx2);font-size:11px;letter-spacing:2px}
+  .majors .note{font-size:11.5px;color:var(--tx2);margin-top:10px;opacity:.85}
   /* ===== achievement gallery ===== */
   .achieve{display:grid;grid-template-columns:1fr;gap:18px;margin-top:44px}
   @media(min-width:768px){.achieve{grid-template-columns:1.2fr 1fr 1fr}}
@@ -366,6 +401,44 @@
           <div class="stat"><b>3:03:09</b><span>個人最佳（台北馬）</span></div>
           <div class="stat"><b>×5</b><span>波馬連續完賽</span></div>
           <div class="stat"><b>七星</b><span>六大滿貫＋雪梨</span></div>
+          <div class="stat"><b>26</b><span>場 BQ 達標</span></div>
+        </div>
+        <div class="races">
+          <div class="rt">分組名次</div>
+          <div class="row"><b class="rk b">3</b><span class="nm">台北馬拉松</span><span class="dt">2025.12.21</span></div>
+          <div class="row"><b class="rk g">1</b><span class="nm">三鶯陶花源馬拉松</span><span class="dt">2021.03.28</span></div>
+          <div class="row"><b class="rk n">5</b><span class="nm">大湖草莓馬拉松</span><span class="dt">2021.02.06</span></div>
+          <div class="row"><b class="rk s">2</b><span class="nm">太平洋縱谷馬拉松</span><span class="dt">2020.12.05</span></div>
+          <div class="row"><b class="rk g">1</b><span class="nm">板橋馬拉松</span><span class="dt">2020.11.08</span></div>
+          <p class="note">名次為各場賽事分齡組排名，依賽事日期新到舊排列。</p>
+        </div>
+        <div class="bq">
+          <div class="rt">BQ 達標場次（2019 至 2026）</div>
+          <div class="bars">
+            <div class="col"><div class="c">1</div><div class="bar"><i style="height:11px"></i></div><span class="y">2019</span></div>
+            <div class="col"><div class="c">4</div><div class="bar"><i style="height:43px"></i></div><span class="y">2020</span></div>
+            <div class="col"><div class="c">5</div><div class="bar"><i style="height:54px"></i></div><span class="y">2021</span></div>
+            <div class="col"><div class="c">3</div><div class="bar"><i style="height:32px"></i></div><span class="y">2022</span></div>
+            <div class="col"><div class="c">3</div><div class="bar"><i style="height:32px"></i></div><span class="y">2023</span></div>
+            <div class="col"><div class="c">4</div><div class="bar"><i style="height:43px"></i></div><span class="y">2024</span></div>
+            <div class="col"><div class="c">4</div><div class="bar"><i style="height:43px"></i></div><span class="y">2025</span></div>
+            <div class="col"><div class="c">2</div><div class="bar"><i style="height:22px"></i></div><span class="y">2026</span></div>
+          </div>
+          <p class="note">2019 年起連續 8 年每年取得波士頓馬拉松參賽資格，累計 26 場（統計至 2026 年 11 月）。</p>
+        </div>
+        <div class="majors">
+          <div class="rt">世界馬拉松大滿貫（八大）參賽場次</div>
+          <div class="grid">
+            <div class="cell"><b>波士頓</b><span class="st">★★★★★</span></div>
+            <div class="cell"><b>柏林</b><span class="st">★★</span></div>
+            <div class="cell"><b>芝加哥</b><span class="st">★★</span></div>
+            <div class="cell"><b>東京</b><span class="st">★</span></div>
+            <div class="cell"><b>紐約</b><span class="st">★</span></div>
+            <div class="cell"><b>倫敦</b><span class="st">★</span></div>
+            <div class="cell"><b>雪梨</b><span class="st">★</span></div>
+            <div class="cell todo"><b>開普敦</b><span class="st">待收集</span></div>
+          </div>
+          <p class="note">每顆星代表一次完賽。七大滿貫已完成、合計 13 場；開普敦為第八站，尚未參賽（統計至 2026 年 11 月）。波士頓連續 5 屆，柏林與芝加哥各 2 次。</p>
         </div>
       </div>
     </div>
