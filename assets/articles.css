@@ -92,6 +92,15 @@ header{position:sticky;top:0;z-index:50;background:rgba(11,13,14,.92);backdrop-f
 .back{display:inline-block;margin:42px 0 0;font-size:13px;letter-spacing:2px;color:var(--tx2)}
 .back:hover{color:var(--green)}
 
+/* ── 文章分享列 ── */
+.share-bar{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:16px 0 0}
+.share-btn{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);border-radius:999px;background:var(--bg2);color:var(--tx2);font-size:13px;letter-spacing:1px;font-weight:700;padding:8px 15px;cursor:pointer;font-family:inherit;transition:border-color .2s,color .2s,background .2s}
+.share-btn svg{flex-shrink:0}
+.share-btn:hover{border-color:var(--green);color:var(--green)}
+.share-line{color:#d7f3e2;border-color:rgba(0,185,0,.35)}
+.share-line:hover{background:#00b900;border-color:#00b900;color:#0b0d0e}
+.share-btn.copied{border-color:var(--green);color:var(--green)}
+
 /* ── footer ── */
 footer{border-top:1px solid var(--line);padding:52px 0 40px}
 .footer-brand{display:flex;align-items:center;gap:14px;margin-bottom:18px}
@@ -115,6 +124,8 @@ footer .copy{margin-top:24px;font-size:12px;color:#4a5156;letter-spacing:.5px}
   .article-hero .thumb.ph{height:220px}
   .prose p{font-size:17px;line-height:2}
   .pullquote{font-size:17px}
+  .share-bar{gap:8px;margin-top:14px}
+  .share-btn{font-size:13px;padding:8px 13px}
   footer{padding:44px 0 32px}
   footer .slogan{font-size:15px}
   footer .copy{font-size:13px}
