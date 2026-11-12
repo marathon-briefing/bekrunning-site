@@ -331,6 +331,22 @@
     footer .slogan{font-size:15px;line-height:1.7}
     footer .copy{font-size:13px}
   }
+
+  /* ===== 文章專區 ===== */
+  .artsec{padding:90px 20px;border-top:1px solid var(--line)}
+  .artsec .wrap{max-width:1100px;margin:0 auto}
+  .art-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:38px}
+  .art-card{display:block;border:1px solid var(--line);border-radius:16px;padding:26px 26px 22px;background:var(--bg2);transition:border-color .25s,transform .25s}
+  .art-card:hover{border-color:var(--green);transform:translateY(-3px)}
+  .art-meta{display:flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--tx2)}
+  .art-tag{color:var(--green);border:1px solid rgba(0,194,168,.35);border-radius:999px;padding:3px 10px;font-size:11px;letter-spacing:.1em}
+  .art-title{font-size:19px;font-weight:700;line-height:1.55;margin:14px 0 10px}
+  .art-desc{font-size:14px;color:var(--tx2);line-height:1.75}
+  .art-more{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font-size:13px;color:var(--green);letter-spacing:.05em}
+  .art-foot{text-align:center;margin-top:34px}
+  .art-foot a{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;padding:13px 26px;font-size:14px;color:var(--tx);transition:border-color .25s,color .25s}
+  .art-foot a:hover{border-color:var(--green);color:var(--green)}
+  @media(max-width:760px){.art-grid{grid-template-columns:1fr}.artsec{padding:64px 18px}.art-title{font-size:17px}}
 </style>
 <script type="application/ld+json">
 {
@@ -676,6 +692,43 @@
       </div>
     </div>
 
+  </div>
+</section>
+
+
+<!-- ===== 文章專區 ===== -->
+<section class="artsec" id="articles">
+  <div class="wrap">
+    <div class="kicker">Articles</div>
+    <h2>文章專區</h2>
+    <p class="sub">訓練觀念、賽事指南與計算工具的完整版。想先看我們怎麼想，從這裡開始。</p>
+    <div class="art-grid">
+      <a class="art-card" href="articles/marathon-pace-discipline/">
+        <div class="art-meta"><span class="art-tag">最新</span><span>訓練觀念</span></div>
+        <div class="art-title">前半場借的，後半場要加倍還：馬拉松配速紀律怎麼守</div>
+        <div class="art-desc">前 3 公里感覺很好，不是好訊號。談槍響後為什麼守不住、這筆帳怎麼算，以及三個檢查點。</div>
+        <span class="art-more">閱讀全文 →</span>
+      </a>
+      <a class="art-card" href="articles/sydney-marathon-first-timer/">
+        <div class="art-meta"><span>賽事指南</span></div>
+        <div class="art-title">第一次雪梨馬就上手</div>
+        <div class="art-desc">9 個月備賽時間軸，從打底、長距離、練坡練補給到減量出發，附初馬最常犯的 5 個錯。</div>
+        <span class="art-more">閱讀全文 →</span>
+      </a>
+      <a class="art-card" href="articles/age-grading-calculator/">
+        <div class="art-meta"><span>計算工具</span></div>
+        <div class="art-title">Age Grading 年齡分級：你「年輕的時候」能跑多快</div>
+        <div class="art-desc">把成績換算成 25 至 29 歲的等效表現，才知道自己在哪一級、目標該怎麼設。</div>
+        <span class="art-more">閱讀全文 →</span>
+      </a>
+      <a class="art-card" href="articles/easy-run-benefits/">
+        <div class="art-meta"><span>訓練觀念</span></div>
+        <div class="art-title">輕鬆跑這麼慢，真的有用嗎？</div>
+        <div class="art-desc">訓練的 80% 都該是輕鬆跑。用談話測試、體感與心率判斷跑對了沒。</div>
+        <span class="art-more">閱讀全文 →</span>
+      </a>
+    </div>
+    <div class="art-foot"><a href="articles/">看全部文章 →</a></div>
   </div>
 </section>
 
