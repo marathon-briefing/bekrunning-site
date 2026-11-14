@@ -62,6 +62,8 @@
 
     var url = canonicalUrl();
     var title = articleTitle();
+    // 轉傳時帶出作者（2026-11-14）：原生分享的標題加上署名
+    var shareTitle = title + "｜Kevin Chang";
 
     var bar = document.createElement("div");
     bar.className = "share-bar";
@@ -91,7 +93,7 @@
       native.className = "share-btn share-native";
       native.innerHTML = svg("share") + '<span class="share-label-text">更多分享</span>';
       native.addEventListener("click", function () {
-        navigator.share({ title: title, url: url }).catch(function () {});
+        navigator.share({ title: shareTitle, url: url }).catch(function () {});
       });
       bar.appendChild(native);
     }
