@@ -3,3 +3,4 @@ _backup/
 deploy.sh
 articles/**/*.docx
 articles/**/*.doc
+_preview_*.html
